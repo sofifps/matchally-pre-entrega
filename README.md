@@ -1,6 +1,6 @@
 # 🍃 Matchally — El ritual de la calma
 
-Bienvenida a Matchally, un espacio digital diseñado para compartir la tradición del té matcha, ofreciendo el mejor matcha de ceremonia hasta accesorios artesanales. Este sitio nació como parte de mi formación en Desarrollo Web, con el objetivo de crear una experiencia minimalista, estética y funcional.
+Bienvenido/a a Matchally, un espacio digital diseñado para compartir la tradición del té matcha, ofreciendo el mejor matcha de ceremonia hasta accesorios artesanales. Este sitio nació como parte de mi formación en Desarrollo Web, con el objetivo de crear una experiencia minimalista, estética y funcional.
 
 ---
 
