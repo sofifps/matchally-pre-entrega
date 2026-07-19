@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css"> 
     <link rel="stylesheet" href="../carrito/carrito.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -27,7 +28,6 @@
     <main>
         <section class="section-productos section-p1">
             <h2>Accesorios para tu Ritual</h2>
-
             <div class="productos-container">
                 <div class="destacado">
                     <img src="img accesorios/teteraset.jpg" alt="Tetera">        
@@ -40,7 +40,6 @@
                       <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
                 <div class="destacado">
                     <img src="img accesorios/cuenco.jpg" alt="Cuenco">         
                     <div class="destacado-body">
@@ -52,7 +51,6 @@
                         <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
                 <div class="destacado">
                     <img src="img accesorios/portachasen.jpg" alt="Porta Chasen">         
                     <div class="destacado-body">
@@ -64,7 +62,6 @@
                         <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
                 <div class="destacado">
                     <img src="img accesorios/batidorbambu.jpg" alt="Batidor de Bambú">         
                     <div class="destacado-body">
@@ -76,8 +73,7 @@
                         <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-                
-               <div class="destacado">
+                <div class="destacado">
                     <img src="img accesorios/cuchara.jpg" alt="Cuchara Bambú">
                     <div class="destacado-body">
                         <h5>Cuchara de Bambú</h5>
@@ -88,7 +84,6 @@
                        <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
                 <div class="destacado">
                     <img src="img accesorios/taza.jpg" alt="Taza">
                     <div class="destacado-body">
@@ -100,20 +95,17 @@
                        <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
-
-                 <div class="destacado">
+                <div class="destacado">
                     <img src="img accesorios/vasovidrio.jpg" alt="Vaso">
                     <div class="destacado-body">
                         <h5>Vaso</h5>
-                        <span>Vaso de Vidrio para Iced Matcha Latte (NO Incluye Bombilla de Vidrio)</span>
+                        <span>Vaso de Vidrio para Iced Matcha Latte</span>
                         <h4>$8.000</h4>
                     </div>
                     <button class="carrito" onclick="agregarAlCarrito('vaso-vidrio', 'Vaso de Vidrio', 8000, 'accesorios/img accesorios/vasovidrio.jpg')"> 
                        <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
                 <div class="destacado">
                     <img src="img accesorios/totebag.jpg" alt="Tote Bag">
                     <div class="destacado-body">
@@ -121,11 +113,10 @@
                         <span>Tote Bag con Diseño Matcha</span>
                         <h4>$20.000</h4>
                     </div>
-                    <button class="carrito" onclick="agregarAlCarrito('vaso-vidrio', 'Vaso de Vidrio', 8000, 'accesorios/img accesorios/totebag.jpg')"> 
+                    <button class="carrito" onclick="agregarAlCarrito('tote-bag', 'Tote Bag', 20000, 'accesorios/img accesorios/totebag.jpg')"> 
                        <i class="fa-solid fa-cart-shopping"></i> Comprar
                     </button>
                 </div>
-
             </div>
         </section>
     </main>
@@ -150,11 +141,11 @@
         </div>
     </footer>
 
-        <aside id="carritoPanel" class="carrito-panel" aria-label="Carrito de compras">
-           <div class="carrito-header">
+    <aside id="carritoPanel" class="carrito-panel" aria-label="Carrito de compras">
+        <div class="carrito-header">
             <h3>Tu Carrito</h3>
             <button type="button" id="carritoCerrar" class="btn-cerrar-carrito">&times;</button>
-           </div>
+        </div>
         <div id="envioGratisBar" class="envio-gratis-bar" style="display: none;"></div>
         <ul id="carritoLista" class="carrito-lista"></ul>
         <div class="carrito-panel-footer">
@@ -169,18 +160,7 @@
             <button type="button" id="seguirComprando" class="btn-seguir">SEGUIR COMPRANDO</button>
             <button type="button" id="finalizarPedido" class="btn-comprar">FINALIZAR PEDIDO</button>
         </div>
-        </aside>
-
-    <div class="carrito-panel" id="carrito-panel">
-        <div class="carrito-header">
-            <h2>Tu Carrito</h2>
-            <button id="cerrarCarrito"><i class="fa fa-times"></i></button>
-        </div>
-        <div id="lista-carrito"></div>
-        <div class="total-carrito">
-            <p>Total: $<span id="total-precio">0</span></p>
-        </div>
-    </div>
+    </aside>
 
     <script src="../script.js"></script>
 </body>
