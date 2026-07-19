@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/Logo.icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="carrito/carrito.css">
+    <title> Matcha orgánico | Matchally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/addbedd263.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="popupDescuento" class="popup-overlay">
+        <div class="popup-content">
+            <button id="closePopupBtn" class="popup-cerrar" aria-label="Cerrar ventana">&times;</button>
+            
+            <div class="popup-izquierda">
+                <img src="img/lata.jpg" alt="Matcha Matchally">
+            </div>
+            
+            <div class="popup-derecha">
+                <h3>10% de descuento en toda la tienda</h3>
+                <p class="subtitulo-popup">y muchos más beneficios dentro del club!</p>
+                
+                <form id="popupForm">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit" class="btn-popup-enviar">QUIERO MI DESCUENTO</button>
+                </form>
+                
+                <button type="button" id="noGraciasBtn" class="btn-no-gracias">No, gracias</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="logo-principal">
+            <img src="img/Logo.png" alt="Logo Matchally" width="40px" height="40px">
+        </a>
+        <div>
+            <ul id="navbar" class="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="../productos.html">TÉ EN HEBRAS</a></li>
+                <li><a href="accesorios/accesorios.html">ACCESORIOS</a></li>
+                <li><a href="contacto/contacto.html">CONTACTO</a></li>
+                <li><a href="recetas/recetas.html">RECETAS</a></li>
+                
+                <li>
+                    <a href="#" id="abrirCarritoLink">
+                     <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>El ritual de la calma</h1>
+                <h2>Tenemos todo lo que necesitás para tu ritual de Matcha. Encontrá tu enfoque con Matchally</h2> 
+                <p>Matcha de origen 100% natural | Envío gratis desde $40.000 </p>
+                <button><a href="../productos.html">Ver productos</a></button>
+            </div>
+        </section>
+
+        <section class="section-productos section-p1">
+            <h2>Lo más pedido</h2>
+            <div class="productos-container">
+
+                <div class="destacado">
+                    <img src="img/lata.jpg" alt="lata">         
+                    <div class="destacado-body">
+                        <h5>Matcha</h5>
+                        <span>Grado Ceremonial en polvo</span>
+                        <h4>$25.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('matcha-ceremonial', 'Matcha (Grado Ceremonial)', 25000, 'img/lata.jpg')"> 
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+                <div class="destacado">
+                    <img src="img/accesorios.jpg" alt="accesorios">         
+                    <div class="destacado-body">
+                        <h5>Accesorios</h5>
+                        <span>Los mejores productos para una experiencia única</span>
+                        <h4>Desde $5.000</h4>
+                    </div>
+                    <a href="accesorios/accesorios.html" style="text-decoration: none;">
+                        <button class="carrito" type="button">
+                           <i class="fa-solid fa-eye"></i> Ver más
+                        </button>
+                    </a>
+                </div>
+        
+                <div class="destacado">
+                    <img src="img/refil.jpg" alt="refill">         
+                    <div class="destacado-body">
+                        <h5>Refill</h5>
+                        <span>No te quedes sin té Matcha</span>
+                        <h4>$15.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('matcha-refill', 'Matcha Refill', 15000, 'img/refil.jpg')"> 
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner section-m1">
+            <a href="recetas/recetas.html">
+                <button><i class="fa-regular fa-heart"></i></button>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="col">
+            <h4>Contacto</h4>
+            <p><strong>Dirección:</strong> Calle Falsa 123, Buenos Aires</p> 
+            <p><strong>Teléfono:</strong> +54 11 7865 4357</p>
+            <p><strong>Horario:</strong> 8:00 am - 18:00 pm, Lunes a Sábados</p>   
+            <div class="follow">
+              <h4>Seguinos</h4>
+              <div class="icon">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/home" target="_blank">
+                <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026, Sofia Duarte | Entrega final </p>
+        </div>
+    </footer>
+    
+    <aside id="carritoPanel" class="carrito-panel" aria-label="Carrito de compras">
+        <div class="carrito-header">
+            <h3>Tu Carrito</h3>
+            <button type="button" id="carritoCerrar" class="btn-cerrar-carrito">&times;</button>
+        </div>
+
+        <div id="envioGratisBar" class="envio-gratis-bar" style="display: none;"></div>
+
+        <ul id="carritoLista" class="carrito-lista"></ul>
+
+        <div class="carrito-panel-footer">
+            <div class="cupon-contenedor">
+                <input type="text" id="cuponInput" placeholder="CUPÓN DE DESCUENTO">
+                <button type="button" id="aplicarCuponBtn">APLICAR</button>
+            </div>
+
+            <div class="subtotal-fila">
+                <span>SUBTOTAL</span>
+                <span id="carritoTotal">$0</span>
+            </div>
+            <button type="button" id="seguirComprando" class="btn-seguir">SEGUIR COMPRANDO</button>
+            <button type="button" id="finalizarPedido" class="btn-comprar">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <script src="../script.js"></script>
+</body>
+</html>

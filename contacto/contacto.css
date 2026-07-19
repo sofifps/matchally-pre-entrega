@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-image: url("../img/fondocontacto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #181a1b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.titulo-formulario {
+    text-align: center;
+    font-size: 20px;
+    color: #112929;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-input label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #112929;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.btn-enviar {
+    background-color: #112929;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logo-principal {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-principal:hover {
+    transform: scale(1.05);
+}
+
+.navbar { 
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #d8d4cf;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #8fa881;
+}
+.footer {
+    background-color: #181a1b;
+    color: #d8d4cf;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px 80px;
+    margin-top: 50px;
+}
+
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.footer h4 {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: #d8d4cf;
+}
+
+.footer .follow .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer .follow .icon a {
+    color: #d8d4cf;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer .follow .icon a:hover {
+    color: #8fa881;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333333;
+    padding-top: 15px;
+    color: #777777;
+}

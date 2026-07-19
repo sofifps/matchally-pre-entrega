@@ -1,0 +1,295 @@
+/* Carrito panel */
+.carrito-panel {
+    position: fixed;
+    top: 0;
+    right: -460px;
+    width: 440px;
+    height: 100vh;
+    background-color: #131415;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.6);
+    transition: right 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+.carrito-panel.activo {
+    right: 0;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background-color: #131415;
+    border-bottom: 1px solid #1c1d1e;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.carrito-header h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-cerrar-carrito {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-size: 28px !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: opacity 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.btn-cerrar-carrito:hover {
+    opacity: 0.7;
+}
+
+.envio-gratis-bar {
+    background-color: #2b4635;
+    color: #d8ecd0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #1c1d1e;
+}
+
+.carrito-lista {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 10px 24px;
+    margin: 0;
+}
+
+.carrito-item {
+    display: flex;
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid #1c1d1e;
+    align-items: flex-start;
+}
+
+.carrito-item-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.carrito-item-detalles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.carrito-item-fila-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.carrito-item-titulo {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 180px;
+}
+
+.btn-eliminar-texto {
+    background: none;
+    border: none;
+    color: #e04f4f;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-eliminar-texto:hover {
+    color: #ff5c5c;
+}
+
+.carrito-item-fila-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrito-item-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.carrito-item-selector button {
+    background: none;
+    border: none;
+    color: #7b8185;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.carrito-item-selector button:hover {
+    color: #ffffff;
+}
+
+.carrito-item-selector span {
+    color: #ffffff;
+    font-size: 14px;
+    min-width: 12px;
+    text-align: center;
+}
+
+.carrito-item-precio {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Cupon de descuento */
+.cupon-contenedor {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#cuponInput {
+    flex: 1;
+    background-color: #1c1d1e;
+    border: 1px solid #2d3032;
+    padding: 12px;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+#cuponInput:focus {
+    border-color: #69854b;
+}
+
+#cuponInput:disabled {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    border-color: #2d3032;
+    cursor: not-allowed;
+}
+
+#aplicarCuponBtn {
+    background-color: transparent;
+    border: 1px solid #69854b;
+    color: #ffffff;
+    padding: 0 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+}
+
+#aplicarCuponBtn:hover {
+    background-color: #69854b;
+    color: #ffffff;
+}
+
+#aplicarCuponBtn.aplicado {
+    background-color: #556246;
+    border-color: #556246;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: not-allowed;
+}
+
+/* pie del carrito */
+.carrito-panel-footer {
+    padding: 24px;
+    border-top: 1px solid #1c1d1e;
+    background-color: #131415;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subtotal-fila {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.btn-seguir {
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #2d3032;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-seguir:hover {
+    background-color: #1c1d1e;
+}
+
+.btn-comprar {
+    width: 100%;
+    background-color: #69854b;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #799a56;
+}
+
+@media (max-width: 576px) {
+    .carrito-panel {
+        width: 100%;
+        right: -100%;
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="../carrito/carrito.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/addbedd263.js" crossorigin="anonymous"></script>
+    <title>Accesorios | Matchally</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="../index.html" class="logo-principal">
+            <img src="../img/Logo.png" alt="Logo Matchally" width="40px" height="40px">
+        </a>
+        <ul id="navbar" class="navbar">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../productos.html">TÉ EN HEBRAS</a></li>
+            <li><a href="accesorios.html">ACCESORIOS</a></li>
+            <li><a href="../contacto/contacto.html">CONTACTO</a></li>
+            <li><a href="../recetas/recetas.html">RECETAS</a></li>
+            <li><a href="#" id="abrirCarritoLink"><i class="fa fa-shopping-bag"></i></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="section-productos section-p1">
+            <h2>Accesorios para tu Ritual</h2>
+
+            <div class="productos-container">
+                <div class="destacado">
+                    <img src="img accesorios/teteraset.jpg" alt="Tetera">        
+                    <div class="destacado-body">
+                        <h5>Set de Tetera</h5>
+                        <span>Juego de Tetera de Cerámica</span>
+                        <h4>$40.500</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('tetera', 'Tetera', 40500, 'accesorios/img accesorios/teteraset.jpg')"> 
+                      <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+                <div class="destacado">
+                    <img src="img accesorios/cuenco.jpg" alt="Cuenco">         
+                    <div class="destacado-body">
+                        <h5>Cuenco</h5>
+                        <span>Cuenco de Cerámica Artesanal</span>
+                        <h4>$15.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('cuenco-ceramica', 'Cuenco', 15000, 'accesorios/img accesorios/cuenco.jpg')"> 
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+                <div class="destacado">
+                    <img src="img accesorios/portachasen.jpg" alt="Porta Chasen">         
+                    <div class="destacado-body">
+                        <h5>Porta Chasen</h5>
+                        <span>Soporte de Cerámica para Batidor de Matcha Bambu Chasen</span>
+                        <h4>$12.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('porta-chasen', 'Porta Chasen', 10000, 'accesorios/img accesorios/portachasen.jpg')"> 
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+                <div class="destacado">
+                    <img src="img accesorios/batidorbambu.jpg" alt="Batidor de Bambú">         
+                    <div class="destacado-body">
+                        <h5>Batidor de Bambú</h5>
+                        <span>Batidor de Bambú Artesanal para Té Matcha</span>
+                        <h4>$14.900</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('batidor-bambu', 'Batidor de Bambú', 14900, 'accesorios/img accesorios/batidorbambu.jpg')"> 
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+                
+               <div class="destacado">
+                    <img src="img accesorios/cuchara.jpg" alt="Cuchara Bambú">
+                    <div class="destacado-body">
+                        <h5>Cuchara de Bambú</h5>
+                        <span>Cuchara de Bambú Artesanal para Té Matcha</span>
+                        <h4>$5.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('cuchara-bambu', 'Cuchara de Bambú', 5000, 'accesorios/img accesorios/cuchara.jpg')"> 
+                       <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+                <div class="destacado">
+                    <img src="img accesorios/taza.jpg" alt="Taza">
+                    <div class="destacado-body">
+                        <h5>Taza</h5>
+                        <span>Taza de Cerámica para el Mejor Té Matcha</span>
+                        <h4>$10.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('taza-ceramica', 'Taza de Cerámica', 10000, 'accesorios/img accesorios/taza.jpg')"> 
+                       <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+
+                 <div class="destacado">
+                    <img src="img accesorios/vasovidrio.jpg" alt="Vaso">
+                    <div class="destacado-body">
+                        <h5>Vaso</h5>
+                        <span>Vaso de Vidrio para Iced Matcha Latte (NO Incluye Bombilla de Vidrio)</span>
+                        <h4>$8.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('vaso-vidrio', 'Vaso de Vidrio', 8000, 'accesorios/img accesorios/vasovidrio.jpg')"> 
+                       <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+                <div class="destacado">
+                    <img src="img accesorios/totebag.jpg" alt="Tote Bag">
+                    <div class="destacado-body">
+                        <h5>Tote Bag</h5>
+                        <span>Tote Bag con Diseño Matcha</span>
+                        <h4>$20.000</h4>
+                    </div>
+                    <button class="carrito" onclick="agregarAlCarrito('vaso-vidrio', 'Vaso de Vidrio', 8000, 'accesorios/img accesorios/totebag.jpg')"> 
+                       <i class="fa-solid fa-cart-shopping"></i> Comprar
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="col">
+            <h4>Contacto</h4>
+            <p><strong>Dirección:</strong> Calle Falsa 123, Buenos Aires</p> 
+            <p><strong>Teléfono:</strong> +54 11 7865 4357</p>
+            <p><strong>Horario:</strong> 8:00 am - 18:00 pm, Lunes a Sábados</p>   
+            <div class="follow">
+              <h4>Seguinos</h4>
+              <div class="icon">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026, Sofia Duarte | Entrega final </p>
+        </div>
+    </footer>
+
+        <aside id="carritoPanel" class="carrito-panel" aria-label="Carrito de compras">
+           <div class="carrito-header">
+            <h3>Tu Carrito</h3>
+            <button type="button" id="carritoCerrar" class="btn-cerrar-carrito">&times;</button>
+           </div>
+        <div id="envioGratisBar" class="envio-gratis-bar" style="display: none;"></div>
+        <ul id="carritoLista" class="carrito-lista"></ul>
+        <div class="carrito-panel-footer">
+            <div class="cupon-contenedor">
+                <input type="text" id="cuponInput" placeholder="CUPÓN DE DESCUENTO">
+                <button type="button" id="aplicarCuponBtn">APLICAR</button>
+            </div>
+            <div class="subtotal-fila">
+                <span>SUBTOTAL</span>
+                <span id="carritoTotal">$0</span>
+            </div>
+            <button type="button" id="seguirComprando" class="btn-seguir">SEGUIR COMPRANDO</button>
+            <button type="button" id="finalizarPedido" class="btn-comprar">FINALIZAR PEDIDO</button>
+        </div>
+        </aside>
+
+    <div class="carrito-panel" id="carrito-panel">
+        <div class="carrito-header">
+            <h2>Tu Carrito</h2>
+            <button id="cerrarCarrito"><i class="fa fa-times"></i></button>
+        </div>
+        <div id="lista-carrito"></div>
+        <div class="total-carrito">
+            <p>Total: $<span id="total-precio">0</span></p>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

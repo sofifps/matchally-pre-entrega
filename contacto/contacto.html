@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../popup.css">
+    <link rel="stylesheet" href="../carrito/carrito.css">
+    <link rel="stylesheet" href="contacto.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>Contacto | Matchally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/addbedd263.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo-principal"> 
+            <img src="../img/Logo.png" class="logo-principal" alt="Logo Matchally">
+        </a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../productos/productos.html">TÉ EN HEBRAS</a></li>
+                <li><a href="../accesorios/accesorios.html">ACCESORIOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="../recetas/recetas.html">RECETAS</a></li>
+                <li>
+                    <a href="#" id="abrirCarritoLink">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+         <h2 class="titulo-formulario">¿Querés contactarte con nosotros? Dejá tu mensaje</h2>
+         <form class="formulario-contacto" id="contactForm">
+             <div class="grupo-input">
+                 <label for="nombre">Nombre</label>
+                 <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="name" required>
+             </div>
+
+             <div class="grupo-input">
+                 <label for="email">Email</label>
+                 <input type="email" id="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+             </div>
+
+             <div class="grupo-input">
+                 <label for="mensaje">Mensaje</label>
+                 <textarea id="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" autocomplete="off" required></textarea>
+             </div>
+             <button type="submit" class="btn-enviar">Enviar</button>
+             <div id="formSuccess" style="display: none; font-weight: 600; margin-top: 15px; text-align: center;"></div>
+         </form>
+    </main>
+
+    <section class="mapa-contenedor">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.435791234567!2d-58.4000000!3d-34.6000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM0TCsDM2JzAwLjAiUyA1OMKwMjQnMDAuMCJX!5e0!3m2!1ses!2sar!4v1234567890123" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+    
+    <footer class="footer">
+        <div class="col">
+            <h4>Más info</h4>
+            <p><strong>Dirección:</strong> Calle Falsa 123, Buenos Aires</p> 
+            <p><strong>Teléfono:</strong> +54 11 7865 4357</p>
+            <p><strong>Horario:</strong> 8:00 am - 18:00 pm, Lunes a Sábados</p>   
+            <div class="follow">
+                <h4>Seguinos</h4>
+                <div class="icon">
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/home" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026, Sofia Duarte | Entrega Final </p>
+        </div>
+    </footer>
+
+    <aside id="carritoPanel" class="carrito-panel" aria-label="Carrito de compras">
+        <div class="carrito-header">
+            <h3>Tu Carrito</h3>
+            <button type="button" id="carritoCerrar" class="btn-cerrar-carrito" aria-label="Cerrar carrito">&times;</button>
+        </div>
+        
+        <div id="envioGratisBar" class="envio-gratis-bar">
+            TE FALTAN <span id="envioFaltante">$0</span> PARA EL ENVÍO GRATIS
+        </div>
+        
+        <ul id="carritoLista" class="carrito-lista"></ul>
+        
+        <div class="carrito-panel-footer">
+            <div class="subtotal-fila">
+                <span>SUBTOTAL</span>
+                <span id="carritoTotal">$0</span>
+            </div>
+            <button type="button" id="seguirComprando" class="btn-seguir">SEGUIR COMPRANDO</button>
+            <button type="button" id="finalizarPedido" class="btn-comprar">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <script src="../script.js"></script>
+    <script src="contacto.js?v=9999"></script>
+</body>
+</html>

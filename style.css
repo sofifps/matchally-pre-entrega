@@ -1,0 +1,456 @@
+@import url('popup.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", Arial, sans-serif;
+}
+html { scroll-behavior: smooth;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #112929;
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: rgb(17, 41, 41) ;
+    font-family: "Lato"
+}
+h4 { font-size: 20px;
+    color: #000000;
+}
+p {
+    font-size: 16px;
+    color: rgb(4, 77, 4);
+    margin: 15px 0 20px 0;
+}
+body {
+    width: 100%;
+}
+/* ================================================
+HEADER Y NAVEGACION
+================================================= */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #181a1b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo-principal {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s;
+}
+.logo-principal:hover {
+    transform: scale(1.05);
+}
+
+.navbar { 
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+.navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+.navbar a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #d8d4cf;
+    transition: 0.3s ease;
+}
+.navbar a:hover {
+    color: #8fa881;
+}
+/* ===========================================
+HERO
+=============================================*/
+.hero {
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 5%center;
+    padding: 0 80px;
+    margin-bottom: 40px;
+}
+
+.hero .hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    z-index: 1;
+}
+
+.hero .hero-content h1 {
+    color: #d9dfb7;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-family: "Lato"
+}
+.hero .hero-content h2 {
+    font-size: 26px;
+    color: #a2ac4a;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px #131111;
+    font-family: "Instrument Serif"
+}
+.hero .hero-content p {
+    font-size: 15px;
+    color: #d9dfb7;
+    margin-bottom: 18px;
+    font-family: "Lato"
+}
+.hero .hero-content button a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.hero .hero-content button {
+    background-color: #69854b;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 5px 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .hero-content button:hover {
+    background-color: #195c1e;
+}
+/* =========================================================
+SECCION DESTACADOS
+===========================================================*/
+.section-productos {
+    text-align: center;
+    padding: 40px 10px;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    background-color: #f1f5ee; 
+    border-radius: 20px;
+}
+.section-productos .productos-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-productos .productos-container .destacado {
+    background-color: #ffffff;
+    width: 22%;
+    min-width: 220px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #e5e6cd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-productos .productos-container .destacado img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.section-productos .productos-container .destacado .destacado-body {
+    text-align: start;
+    height: 110px;
+    display: block;
+}  
+.section-productos .productos-container .destacado .destacado-body span {
+    color: #606063;
+    font-size: 13px;
+    display: block;
+    line-height: 1.2; 
+}
+.section-productos .productos-container .destacado .destacado-body h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+/*Precio*/
+.section-productos .productos-container .destacado .destacado-body h4 {
+    padding-top: 7px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #69854b;
+    margin-top: auto;
+}
+/*Efecto hover en la card*/
+.section-productos .productos-container .destacado:hover {
+    box-shadow: 22px 20px 26px rgba(0, 0, 0, 0.15);
+}
+/*Boton comprar al carrito*/
+.section-productos .productos-container .destacado .carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 12px;
+    border-radius: 8px;
+    background-color: #69854b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+    list-style: none;
+    text-decoration: none;
+}
+.section-productos .productos-container .destacado .carrito:hover {
+    background-color: #195c1e;
+}
+
+/*BANNER*/
+.banner {
+    width: 100%;
+    height: 40vh;
+    background-image: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10%;
+}
+.banner h4 {
+    color: #101808;
+    font-size: 30px;
+    padding: 30px;
+    padding-top: 10;
+    text-shadow: 1px 1px #131111;
+    
+
+}
+.banner button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 10px;
+    color: #000;
+    background-color: #69854b;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+
+}
+.banner button:hover {
+    background: #06473a;
+    color: #7c5656;
+}
+
+/*footer*/
+.footer {
+    background-color: #181a1b;
+    color: #d8d4cf;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 40px 80px;
+}
+
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.footer h4 {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: #d8d4cf;
+}
+
+.footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #d8d4cf;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #8fa881;
+}
+
+.footer .follow {
+    margin-top: 20px;
+}
+
+.footer .follow .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer .follow .icon i {
+    color: #d8d4cf;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer .follow .icon i:hover {
+    color: #8fa881;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333333;
+    padding-top: 15px;
+    color: #777777;
+}
+
+@media (max-width: 576px) {
+    .carrito-panel {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carrito-panel {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .hero { padding: 0 60px; }
+    .hero .hero-content { width: 55%; }
+    .header { padding: 20px 40px; }
+    .footer { padding: 40px 40px; }
+    .section-productos .productos-container { justify-content: space-around; }
+    .section-productos .productos-container .destacado { margin: 15px 10px; }
+    .banner { padding: 0 60px; }
+    .banner h4 { font-size: 28px; }
+}
+
+@media (max-width: 992px) {
+    .navbar li { padding: 0 10px; }
+    .hero { height: 85vh; padding: 0 60px; }
+    .hero .hero-content { width: 60%;}
+    .hero .hero-content h1 { font-size: 2.5rem; }
+    .hero .hero-content h4 { font-size: 2.2rem; }
+    .hero .hero-content h5 { font-size: 0.9rem; }
+    .section-productos h2 { font-size: 1.8rem; }
+    .section-productos p { font-size: 0.9rem; }
+    .section-productos .productos-container .destacado { width: 30%; min-width: 220px; }
+    .banner { height: 35vh ; }
+    .banner h4 { font-size: 26px }
+}
+
+@media (max-width: 768px) {
+    .header { 
+       flex-direction: column;
+       gap: 15px;
+       padding: 20px;
+    }
+    .navbar { 
+       justify-content: center;
+       flex-wrap: wrap;
+    }
+    .navbar li { padding: 0 8px; }
+    .hero { 
+       height: 70vh;
+       padding: 0 60px;
+       justify-content: center;
+       background-position: top center;
+    }
+    .hero .hero-content {
+       width: 80%;
+       align-items: center;
+       text-align: center;
+    }
+    .hero .hero-content h4  { font-size: 0.9rem; }
+    .hero .hero-content h2 { font-size: 1.8rem; }
+    .hero .hero-content h1 { font-size: 2.2rem; }
+    .section-productos .productos-container .destacado { width: 45%; min-width: 200px; }
+    .section-productos .productos-container { justify-content: space-between; }
+    .banner { height: 30vh ; padding: 0 20px; }
+    .banner h4 { font-size: 14px }
+    .banner button { padding : 12px 20px }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    .footer .col {
+        align-items: center;
+    }
+    .footer .follow .icon {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .header { padding: 15px 10px; }
+    .navbar { gap: 10px; }
+    .navbar a { font-size: 14px; }
+    .hero { height: 60vh; padding: 0 20px; background-position: 55% center; }
+    .hero .hero-content { width: 100%; }
+    .hero .hero-content h4 { font-size: 0.8rem; }
+    .hero .hero-content h2 { font-size: 1.5rem; }
+    .hero .hero-content h1 { font-size: 1.8rem; margin-bottom: 10px; }
+    .hero .hero-content p { font-size: 0.8rem; margin-bottom: 15px; }
+    .hero .hero-content button { padding: 10px 20px; font-size: 0.9rem; }
+    .section-productos { padding: 20px 10px; }
+    .section-productos h2 { font-size: 1.5rem; }
+    .section-productos .productos-container .destacado { width: 100%; min-width: unset; margin: 10px 0; }
+    .section-productos .productos-container .destacado .destacado-body h5 { font-size: 13px; }
+    .banner { height: 25vh; }
+    .banner h4 { font-size : 12px }
+    .banner button { padding : 10px 15px; font-size: 12px; }
+}
+

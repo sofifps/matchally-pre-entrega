@@ -1,0 +1,229 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.popup-overlay.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    background-color: #2b331f;
+    width: 90%;
+    max-width: 780px;
+    height: 480px;
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.85);
+    transition: transform 0.4s ease;
+}
+
+.popup-overlay.mostrar .popup-content {
+    transform: scale(1);
+}
+
+.popup-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+}
+
+.popup-cerrar:hover {
+    color: #ffffff;
+}
+
+.popup-izquierda {
+    flex: 1;
+    height: 100%;
+}
+
+.popup-izquierda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-derecha {
+    flex: 1;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popup-derecha h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.subtitulo-popup {
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+#popupForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#popupForm input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#popupForm input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#popupForm input:focus {
+    border-color: #69854b;
+}
+
+.btn-popup-enviar {
+    background-color: #064019;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-popup-enviar:hover {
+    background-color: #095221;
+}
+
+.btn-no-gracias {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn-no-gracias:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 680px) {
+    .popup-izquierda {
+        display: none;
+    }
+    .popup-content {
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+/*Colores cupon*/
+
+.cupon-contenedor {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#cuponInput {
+    flex: 1;
+    background-color: #1c1d1e; 
+    border: 1px solid #2d3032;
+    padding: 12px;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+#cuponInput:focus {
+    border-color: #69854b; 
+}
+
+#aplicarCuponBtn {
+    background-color: transparent;
+    border: 1px solid #69854b; 
+    color: #ffffff;
+    padding: 0 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+}
+
+#aplicarCuponBtn:hover {
+    background-color: #69854b;
+    color: #ffffff;
+}
+
+/* Una vez aplicado */
+#aplicarCuponBtn.aplicado {
+    background-color: #556246; 
+    color: rgba(255, 255, 255, 0.6);
+    cursor: not-allowed;
+}
+
+#cuponInput:disabled {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    border-color: #2d3032;
+    cursor: not-allowed;
+}
